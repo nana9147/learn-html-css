@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프레이징 요소</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>프레이징 요소</h1>
+    <hr />
+
+    <article>
+      <h2 class="sr-only">후기</h2>
+      <br />
+      <p>
+        <em><em>무엇이 중요한지</em> 알게된 시간!</em>
+      </p>
+      <p>
+        제가 들었던 해외 튜토리얼에 비해 <strong>시맨틱한 마크업</strong>과 <strong>접근성</strong> 비중이 크게 다뤄져 좋았습니다. <br />
+        많은 튜토리얼들이 디자인을 어떻게 구현하는지에만 초점이 맞춰져 있잖아요.<br />
+        <em>무엇이 중요한지 알게되어 많은 도움이 되었습니다.</em>
+      </p>
+      <br />
+
+      <!-- 일반적인 문단 요소 활용 -->
+      <p>
+        <span aria-hidden="true">★★★★★</span><br />
+        <b><span class="sr-only">별점</span> 5점</b><br />
+      </p>
+
+      <p><span class="sr-only">작성자</span>우정민</p>
+
+      <hr />
+      <!-- 정의형 목록 관련 요소 활용 -->
+      <dl>
+        <dt class="sr-only">별점</dt>
+        <dd><span aria-hidden="true">★★★★★</span></dd>
+        <dd>5점</dd>
+
+        <dt class="sr-only">작성자</dt>
+        <dd>우정민</dd>
+      </dl>
+    </article>
+  </body>
+</html>
