@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dialog 요소</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <style>
+      .panel-dialog {
+        background-color: lightcoral;
+        margin-top: 20px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body style="margin: 50px">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>dialog 요소와 popover 속성</h1>
+    <hr />
+
+    <!-- dialog 요소 -->
+    <button type="button" class="show-dialog">혜택 보기</button>
+    <dialog class="panel-dialog" aria-labelledby="surprice-benefits" aria-describedby="surprice-benefits-details">
+      <h2 id="surprice-benefits">깜짝 혜택</h2>
+      <p id="surprice-benefits-details">쉿! 고객님만을 위한 깜짝 할인 쿠폰 어제 빠뜨린 상품도 할인받고 내일 만나요!</p>
+      <hr />
+      <a href="/">쿠폰 확인하기</a>
+      <button class="close-dialog" type="button">닫기</button>
+    </dialog>
+    <hr />
+
+    <!-- popover 속성 -->
+    <div>
+      <button type="button" popovertarget="likeLion">팝오버 보기</button>
+      <p popover id="likeLion">멋쟁이 사자처럼 프론트엔드 부트캠프 화이팅!</p>
+    </div>
+    <script>
+      (function () {
+        // --- DOM selection ---
+        const showBtn = document.querySelector('.show-dialog');
+        const panel = document.querySelector('.panel-dialog');
+        const closeBtn = document.querySelector('.close-dialog');
+
+        // --- Functions ---
+        function openPanel() {
+          if (!panel) return;
+          panel.setAttribute('open', '');
+        }
+
+        function closePanel() {
+          if (!panel) return;
+          panel.removeAttribute('open');
+        }
+
+        // --- Event binding ---
+        if (showBtn) showBtn.addEventListener('click', openPanel);
+        if (closeBtn) closeBtn.addEventListener('click', closePanel);
+
+        // Optional: close on Escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closePanel();
+        });
+
+        // Optional: backdrop click to close when clicking outside the content
+        if (panel) {
+          panel.addEventListener('click', (e) => {
+            if (e.target === panel) closePanel();
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
