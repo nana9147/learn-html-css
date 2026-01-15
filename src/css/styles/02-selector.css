@@ -1,0 +1,74 @@
+/* 전체 선택자 */
+
+* {
+  color: royalblue;
+}
+
+/* 요소 선택자 */
+h1 {
+  background-color: lightblue;
+}
+
+/* 클래스 선택자 */
+.go-index {
+  border: 3px double dodgerblue;
+  margin-block: 10px;
+  padding: 10px;
+}
+
+/* 아이디 선택자 */
+#frontend {
+  color: seagreen;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* 속성 선택자 */
+[title] {
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+/* 자손 결합자 */
+.navigation li {
+  color: blueviolet;
+}
+
+.navigation .menu li {
+  margin-block: 10px;
+}
+
+/* 자식 결합자 */
+.menu > li {
+  list-style-type: disc;
+}
+
+.menu > li > ul > li {
+  background-color: aliceblue;
+  padding-left: 20px;
+}
+
+/* 선택자 그룹화 */
+h1,
+.menu,
+[title] {
+  font-style: italic;
+}
+
+/* 가상 요소 */
+p::first-letter {
+  font-size: 1.5em;
+}
+
+h1::before {
+  content: '💡';
+}
+
+h1::after {
+  content: ' ❤️';
+}
+
+/* 가상 클래스 */
+#frontend:hover {
+  background-color: khaki;
+}
