@@ -1,0 +1,47 @@
+/* border 속성 */
+.like {
+  background-color: aquamarine;
+  border-width: 5px 7px 9px 11px;
+  border-style: solid dotted double dashed;
+  border-color: darkcyan orangered greenyellow cornflowerblue;
+}
+
+.lion {
+  /* board 속성 */
+  background-color: lightpink;
+  border: 5px solid blueviolet;
+
+  /* padding 속성 */
+  padding: 10px 40px;
+
+  /* margin 속성 */
+  margin: 10px;
+}
+
+/* Basic 박스 모델을 활용한 가운데 정렬 레이아웃 */
+.bootcamp {
+  background-color: cornflowerblue;
+  width: 500px;
+  padding: 10px;
+  border: 5px solid greenyellow;
+  margin: 0 0 0 auto;
+}
+
+.school {
+  background-color: lawngreen;
+  padding: 10px;
+}
+
+.school span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* display */
+.frontend {
+  background-color: cadetblue;
+
+  /* block값 지정 */
+  display: block;
+  width: 200px;
+}
