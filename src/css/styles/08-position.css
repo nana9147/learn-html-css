@@ -1,0 +1,50 @@
+/* Static 값 - 대다수의 기본값 */
+
+/* relative 값 - 상대 위치 */
+/* position: relative를 활용하여 상자 그림자 스타일링 */
+.shadow {
+  background-color: black;
+  margin-block: 10px;
+}
+
+h3 {
+  background-color: lightgoldenrodyellow;
+  padding: 10px;
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
+
+/* absolute 값 - 절대 위치 */
+.wrapper {
+  padding: 20px;
+  border: 1px solid darkgreen;
+  position: relative;
+}
+
+.wrapper h1 {
+  padding: 20px;
+  border: 1px solid darkred;
+}
+
+.wrapper h1 span {
+  background-color: #fdd;
+  position: absolute;
+  width: 100px;
+  font-size: 14px;
+  top: 0;
+  left: 0;
+}
+
+/* fixed 값 - 뷰포트 기준 고정 위치 */
+h2 {
+  background-color: mediumaquamarine;
+}
+
+h2 span {
+  background-color: lightslategrey;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
