@@ -1,0 +1,54 @@
+.likelion {
+  background-color: #c4efe0;
+  padding: 10px;
+
+  /* &연산자를 사용하여 .likelion을 선택할 수 있음 */
+  &:hover {
+    background-color: #c4d1ef;
+  }
+
+  /* 하위 선택자 */
+
+  ul {
+    padding-left: 20px;
+  }
+
+  /* 자식 선택자 */
+  > ul {
+    border: 1px solid #c78c52;
+  }
+}
+
+/* Sass 방식 중첩 */
+.menu {
+  background-color: skyblue;
+
+  &_item {
+    color: red;
+  }
+
+  &_link {
+    background-color: bisque;
+  }
+
+  &--is-active {
+    text-decoration: underline;
+  }
+}
+
+/* CSS 방식 중첩 */
+.menu {
+  background-color: skyblue;
+
+  .menu_item {
+    color: red;
+  }
+
+  .menu_link {
+    background-color: bisque;
+  }
+
+  .menu--is-active {
+    border: 1px dotted olivedrab;
+  }
+}
