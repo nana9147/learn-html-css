@@ -1,0 +1,29 @@
+/* body 요소 배경 - background 단축속성*/
+body {
+  background: lightsteelblue url(/src/assets/images/tree.png) no-repeat 100% 100% /144px fixed;
+}
+
+/* 단락 기본 여백 */
+div,
+p {
+  margin-block: 10px;
+}
+
+/* 배경 색상 */
+.like {
+  background-color: lemonchiffon;
+}
+
+/* background-image */
+/* background-repeat */
+/* background-position */
+/* backgorund-size */
+.lion {
+  padding: 10px;
+  height: 200px;
+  background-color: plum;
+  background-image: url(/src/assets/images/rabbit.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: contain;
+}
