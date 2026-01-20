@@ -1,0 +1,57 @@
+/* 컴포넌트 */
+.avatar {
+  --size: 4rem;
+  --border-color: var(--white, #fff);
+  --online: var(--avatar-green, #03cc5c);
+  --offline: var(--avatar-gray, #bcc3c7);
+
+  position: relative;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: var(--size);
+  height: var(--size);
+
+  img {
+    border-radius: 50%;
+  }
+
+  .state {
+    --size: 25%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+  }
+
+  &.online {
+    .state {
+      background: var(--online);
+    }
+  }
+
+  &.offline {
+    .state {
+      background: var(--offline);
+    }
+  }
+}
+
+/* 레이아웃 */
+.avatars {
+  --count: 4;
+  --size: 64px;
+
+  border: 1px solid currentColor;
+  display: flow-root;
+  width: 396px;
+  padding: 20px;
+
+  .avatar {
+    float: left;
+    margin: 10px;
+  }
+}
