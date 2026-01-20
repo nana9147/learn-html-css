@@ -23,6 +23,14 @@ a {
   }
 
   .markup {
+    order: 3;
+  }
+
+  .styling {
+    order: 2;
+  }
+
+  .ui {
     order: 1;
   }
 }
