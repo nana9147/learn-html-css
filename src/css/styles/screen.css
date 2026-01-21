@@ -1,0 +1,8 @@
+body {
+  background: #000 url(/src/assets/thumbnail/coffee.png) no-repeat 50% 50%;
+  color: #fff;
+}
+
+h1 {
+  font-size: 60px;
+}

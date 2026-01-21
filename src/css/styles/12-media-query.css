@@ -1,0 +1,26 @@
+/* 공통 규칙 */
+body {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+/* @media 규칙 */
+@media screen and (min-width: 500px) {
+  body {
+    background: var(--pink);
+  }
+}
+
+@media (min-width: 500px) {
+  body {
+    background: var(--mint);
+  }
+}
+
+/* @media 규칙 - 범위 지정 */
+
+@media (500px <= width <= 900px) {
+  body {
+    background: var(--blue);
+  }
+}
