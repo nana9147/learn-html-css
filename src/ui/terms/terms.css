@@ -1,0 +1,36 @@
+/* 컴포넌트 */
+.term {
+  --text-color: #296897;
+  --base-font-size: 16px;
+  --image-gap: 16px;
+  --image-size: 60px;
+  --figure-size: calc(var(--image-size) + (var(--image-gap)));
+
+  background: lightblue;
+  line-height: 1.5;
+  font-size: var(--base-font-size, 16px);
+
+  b {
+    font-weight: 700;
+    font-size: 0.9375em;
+    color: var(--text-color, #296897);
+    float: right;
+    background: pink;
+    width: calc(100% - var(--figure-size));
+    margin-bottom: 4px;
+  }
+
+  figure {
+    float: left;
+    margin-right: var(--image-gap);
+
+    img {
+      margin-bottom: 20px;
+      size: var(--image-size);
+    }
+  }
+
+  p {
+    font-size: 0.875em;
+  }
+}
