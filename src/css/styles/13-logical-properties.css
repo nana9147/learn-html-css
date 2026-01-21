@@ -1,0 +1,52 @@
+p {
+  margin-block: 10px;
+}
+
+.like {
+  writing-mode: vertical-rl;
+  background: var(--yellow);
+  overflow: hidden;
+
+  /* width,height 속성에 대응되는 논리 속성 (inline-size, block-size*/
+  /* width: 100px; */
+  inline-size: 100px;
+  /* height: 150px; */
+  block-size: 150px;
+}
+
+/* padding 관련 논리 속성 */
+.lion {
+  background: var(--pink);
+  padding-block-start: 10px;
+  padding-inline-end: 10px;
+  padding-block-end: 10px;
+  padding-inline-start: 10px;
+}
+
+/* position 관련 논리 속성 */
+.euid {
+  background: var(--mint);
+  block-size: 100px;
+  position: relative;
+
+  span {
+    background: var(--lilac);
+    position: absolute;
+    /* inset-block-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0; */
+    inset: auto 0 0 auto;
+  }
+}
+
+/* float 속성에서 사용하는 논리 값 */
+.bootcamp {
+  background: var(--aqua);
+
+  .school {
+    background: var(--lemon);
+    padding: 10px;
+    float: inline-end;
+  }
+}
