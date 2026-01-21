@@ -1,0 +1,46 @@
+/* 유틸리티 바 */
+/* float 속성을 활용한 레이아웃 */
+.utility-bar.float {
+  font-size: 14px;
+  line-height: 1.5;
+  display: flow-root;
+  text-transform: uppercase;
+  width: 373px;
+
+  li,
+  a,
+  span {
+    float: left;
+  }
+
+  a {
+    padding: 8px;
+  }
+
+  span {
+    margin: 8px;
+  }
+}
+
+/* inline-block 속성을 활용한 레이아웃 */
+.utility-bar.inline-block {
+  font-size: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  width: 389px;
+
+  li {
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  a {
+    padding: 8px;
+    display: inline-block;
+  }
+
+  span {
+    margin: 8px;
+    display: inline-block;
+  }
+}
