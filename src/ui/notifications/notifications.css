@@ -1,0 +1,119 @@
+/* 컴포넌트 */
+.notification {
+  --black: #121212;
+  --green: #22be61;
+  --orange: #e3a368;
+  --gray: #9b9a90;
+  --white: #fff;
+
+  --point-color: var(--green);
+  --text-color: var(--gray);
+  --bg-color: var(--white);
+  --border-color: var(--gray);
+  --icon-size: 28px;
+  --spacing: 20px;
+
+  line-height: 1.5;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  flex-flow: nowrap row;
+  padding: var(--spacing);
+  column-gap: var(--spacing);
+  align-items: center;
+
+  /* 알림 아이콘 */
+  .notification-icon {
+    inline-size: var(--icon-size);
+    block-size: var(--icon-size);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
+
+  /* 알림 컨텐츠 */
+  .notification-content {
+    position: relative;
+    /* flex-grow :1, flex-shrink:1 , flex-basis: 0 */
+    flex: 1;
+  }
+  /* 알림 제목 */
+  .notification-subject {
+    font-size: 1.125em;
+    font-weight: 700;
+    color: var(--point-color);
+  }
+
+  /* 알림 내용 */
+  .notification-description {
+    font-size: 0.875em;
+    color: var(--text-color);
+  }
+
+  /* 알림 시간 */
+  .notification-time {
+    font-size: 0.75em;
+    color: var(--point-color);
+    margin-block-start: 0.1875rem;
+    position: absolute;
+    inset: 0 0 auto auto;
+  }
+}
+
+/* 레이아웃 */
+/* column일 경우  */
+/* 
+.notifications {
+  display: flex;
+  flex-flow: nowrap column;
+  row-gap: 16px;
+  min-inline-size: 200px;
+}
+
+// 반응형
+@media (width >= 768px) {
+  .notifications {
+    flex-flow: wrap row;
+    column-gap: 10px;
+    margin-inline: 50px;
+
+    .notification {
+      inline-size: calc(50% - 10px);
+    }
+  }
+} 
+ */
+
+/* row일 경우 */
+/* 1단 */
+.notifications {
+  --spacing-y: 20px;
+
+  display: flex;
+  flex-flow: wrap row;
+  row-gap: 16px;
+
+  @media (width >= 768px) {
+    column-gap: var(--spacing-y);
+  }
+
+  @media (width >= 1280px) {
+    flex-wrap: nowrap;
+  }
+
+  .notification {
+    inline-size: 100%;
+
+    /* 2단 */
+    @media (width >= 768px) {
+      inline-size: calc(50% - (var(--spacing-y) / 2));
+    }
+
+    /* 4단 */
+    @media (width >= 1280px) {
+      inline-size: auto;
+      flex: 1;
+    }
+  }
+}
