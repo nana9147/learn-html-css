@@ -1,0 +1,59 @@
+/* 컴포넌트 */
+body {
+  background: lightcyan;
+}
+/* 로고 */
+.logo {
+  inline-size: 1.5em;
+  aspect-ratio: 1/1;
+  display: block;
+}
+
+/* 입력서식 */
+.form-input {
+  input {
+    inline-size: 100%;
+    block-size: 1.75rem;
+    font-size: 0.875em;
+    padding: 0.125rem 0.5em;
+  }
+}
+
+/* 검색버튼 */
+/* .button-circle {
+  background: greenyellow;
+  inline-size: 1.5rem;
+  aspect-ratio: 1/1;
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inline-size: 40%;
+    aspect-ratio: 1/1;
+    background: #fff;
+    border-radius: 50%;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+  }
+} */
+
+.button-circle {
+  --grad-color: linear-gradient(135deg, #11d975, #00ff62);
+
+  /* 기본 설정 */
+  inline-size: 1.5rem;
+  aspect-ratio: 1/1;
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+
+  background: var(--grad-color);
+
+  /* 마스크 설정 */
+  mask-image: radial-gradient(circle, transparent 30%, black 31%);
+}
