@@ -2,4 +2,5 @@
 @import '/src/common/theme.css';
 @import '/src/common/a11y.css';
 @import '/src/common/base.css';
-@import "/src/common/animation.css";
+@import '/src/common/animation.css';
+@import '/src/common/forms.css';

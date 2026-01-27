@@ -1,21 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+:root {
+  --green-100: #03cc5c;
+  --green-200: #1bf008;
+  --green-300: #03cca8;
+
+  --gray-100: #bcc3c7;
+  --gray-200: #9b9a90;
+  --gray-300: #6d7478;
+
+  --start-color: var(--green-200);
+  --end-color: var(--green-300);
+}
+
 /* 컴포넌트 */
 body {
   background: lightcyan;
 }
-/* 로고 */
+/* svg 로고 */
 .logo {
   inline-size: 1.5em;
   aspect-ratio: 1/1;
   display: block;
 }
 
+/* text 로고 */
+.text-logo {
+  --text-size: 2.3em;
+
+  display: inline-flex;
+  flex-flow: nowrap row;
+
+  /* a요소의 크기가 영문 스펠링 영역만큼만 적용되도록 가로 사이즈를 글자크기의 70%로 지정 */
+  inline-size: calc(var(--text-size) * 0.7);
+
+  .text {
+    /* 텍스트 기본설정 */
+    /* 글자 일부가 잘리지 않도록 하려ㅕㄴ 글자 키가와 동일한 상자 크기 지정 필요 */
+    inline-size: var(--text-size);
+    font-size: var(--text-size);
+    font-weight: 900;
+    line-height: 0.7;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+
+    /* 배경색 지정 */
+    background: green linear-gradient(to bottom, var(--start-color), var(--end-color));
+
+    /* 배경색 마스크 설정 */
+    background-clip: text;
+
+    /* 글씨색 투명화 */
+    color: transparent;
+
+    /* translate 속성으로 사용 (transform 속성에서 함수로 사용할 수 있음) */
+    /* x축으로 2px 이동 */
+    translate: -2px 0;
+  }
+}
+
 /* 입력서식 */
 .form-input {
-  input {
+  input[type='search'] {
+    min-inline-size: 0;
     inline-size: 100%;
     block-size: 1.75rem;
     font-size: 0.875em;
     padding: 0.125rem 0.5em;
+
+    /* 일관된 스타일 지정 */
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+    background-color: #fff;
+
+    /* 포커스 상태 스타일 */
+    &:focus {
+      outline: 2px solid var(--green-300);
+      outline-offset: -1px;
+      border-color: var(--green-100);
+    }
+
+    /* 읽기 전용 상태 디자인 */
+    &:read-only,
+    &[readonly] {
+      background: var(--gray-100);
+    }
+
+    /* 비활성화 상태 디자인 */
+    &:disabled,
+    &[disabled] {
+      background: var(--gray-100);
+      color: red;
+    }
   }
 }
 
@@ -37,12 +113,13 @@ body {
     background: #fff;
     border-radius: 50%;
     inset: 50% auto auto 50%;
+    //transform 속성에서 translate를 함수로 사용
     transform: translate(-50%, -50%);
   }
 } */
 
 .button-circle {
-  --grad-color: linear-gradient(135deg, #11d975, #00ff62);
+  --grad-color: green linear-gradient(135deg, var(--start-color), var(--end-color));
 
   /* 기본 설정 */
   inline-size: 1.5rem;
@@ -55,5 +132,49 @@ body {
   background: var(--grad-color);
 
   /* 마스크 설정 */
-  mask-image: radial-gradient(circle, transparent 30%, black 31%);
+  mask-image: radial-gradient(circle, transparent 25%, black 26%);
+}
+
+/* 레이아웃 */
+.search-bar {
+  background: #fff;
+  --border-color: var(--green-100);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  padding: 12px 12px 12px 20px;
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 12px;
+
+  /* &:focus-within {
+    box-shadow: 0 4px 4px 0 rgba(68, 131, 63, 0.15);
+  } */
+
+  &:has(:focus) {
+    box-shadow: 0 4px 4px 0 rgba(68, 131, 63, 0.15);
+  }
+
+  .search-form {
+    display: contents;
+  }
+
+  .text-logo,
+  .button-circle {
+    flex: none;
+  }
+
+  .form-input {
+    flex: 1;
+    margin-inline-end: 4px;
+
+    input[type='search'] {
+      border: 0;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
 }
