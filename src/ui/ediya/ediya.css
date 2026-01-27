@@ -1,0 +1,132 @@
+:root {
+  --blue-100: #24388d;
+  --blue-200: #263d83;
+  --blue-300: #102457;
+  --blue-900: #0a0f27;
+  --white: #f5f5f5;
+  --gray: #878787;
+  --black: rgba(20, 24, 44, 0.9);
+
+  --start-color: var(--blue-200);
+  --end-color: var(--blue-300);
+  --headline-color: var(--white);
+  --headline-item-color: var(--blue-100);
+  --date-color: var(--gray);
+  --text-color: var(--black);
+}
+
+/* 유튜브 영상 */
+/* 반응형 iframe */
+.youtube {
+  aspect-ratio: 16/9;
+
+  iframe {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+}
+
+/* notice */
+.notice {
+  display: flex;
+  flex-flow: nowrap row;
+
+  .notice-headline-wrapper {
+    background: radial-gradient(circle at left top, var(--start-color), var(--end-color));
+    inline-size: 125px;
+    flex: none;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    padding: 15px;
+
+    .notice-headline {
+      color: var(--headline-color);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .button-group {
+      display: flex;
+      flex-flow: nowrap row;
+      align-self: end;
+      translate: 5px 5px;
+
+      button {
+        border: 0;
+        padding: 0;
+        background: transparent;
+
+        color: var(--headline-color);
+      }
+    }
+  }
+  .notice-item {
+    background: var(--white);
+    flex: 1;
+    padding: 15px;
+
+    .notice-item-headline {
+      font-size: 16px;
+      color: var(--headline-item-color);
+    }
+    .notice-item-date {
+      font-size: 12px;
+      color: var(--date-color);
+    }
+    .notice-item-description {
+      font-size: 14px;
+      margin-block-start: 10px;
+      color: var(--text-color);
+    }
+  }
+}
+
+/* news */
+.news {
+  padding: 15px;
+  --end-color: var(--blue-900);
+  background: radial-gradient(circle at left top, var(--start-color), var(--end-color));
+
+  .news-headline-wrapper {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+
+    .news-headline {
+      display: flex;
+      color: var(--headline-color);
+      font-size: 16px;
+    }
+
+    .news-button {
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--headline-color);
+    }
+  }
+
+  .news-list {
+    margin-block-start: 10px;
+
+    .news-item {
+      margin-block: 5px;
+
+      .news-article {
+        display: flex;
+        flex-flow: nowrap row;
+        justify-content: space-between;
+
+        .news-article-headline {
+          color: var(--headline-color);
+          font-size: 13px;
+        }
+        .news-article-time {
+          color: var(--headline-color);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
