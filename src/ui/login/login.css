@@ -138,6 +138,7 @@
   position: relative;
   display: inline-flex;
   flex-flow: nowrap row;
+  align-items: center;
 
   input {
     position: absolute;
@@ -150,6 +151,7 @@
 
   label {
     inline-size: 2.5em;
+    padding: 5px;
   }
 
   label::after {
@@ -162,5 +164,63 @@
     content: 'ON';
     color: var(--green-100);
     font-weight: 700;
+  }
+}
+
+/* 컴포넌트 */
+/* 헤더 - 로고 */
+.header {
+  padding: 70px 0 45px;
+
+  @media (width >= 768px) {
+    padding: 100px 0 50px;
+  }
+
+  .go-home {
+    inline-size: clamp(164px, 51.25%, 230px);
+    block-size: auto;
+    margin-inline: auto;
+  }
+}
+
+/* 메인 - 로그인 폼 */
+.main {
+  .login-form {
+    display: flex;
+    flex-flow: nowrap column;
+    row-gap: 10px;
+
+    @media (width >= 768px) {
+      inline-size: 460px;
+      margin-inline: auto;
+    }
+  }
+
+  /* 체크박스, 링크텍스트, 스위치 */
+  .checkbox-wrapper {
+    order: 1;
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+
+    @media (width <= 768px) {
+      justify-content: end;
+
+      .new-window-link,
+      .form-switch {
+        display: none;
+      }
+    }
+
+    @media (width >= 768px) {
+      .form-checkbox {
+        margin-inline-end: auto;
+      }
+    }
+  }
+
+  /* 로그인 버튼 */
+  .button {
+    block-size: 55px;
   }
 }
