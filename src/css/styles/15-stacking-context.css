@@ -1,0 +1,117 @@
+.like,
+.lion,
+.euid {
+  border: 1px solid blue;
+  padding: 10px;
+
+  div {
+    inline-size: 100px;
+    block-size: 50px;
+    border: 1px solid green;
+    text-align: center;
+    align-content: center;
+  }
+
+  /* rgb 방식 */
+  div:nth-child(1) {
+    background: rgb(255 80 80 / 0.3);
+    background: rgb(255 80 80 / 1);
+  }
+
+  /* rgba 방식 */
+  div:nth-child(2) {
+    background: rgba(247, 185, 79, 0.493);
+    background: rgba(247, 185, 79, 1);
+  }
+
+  /* 16진수 방식 */
+  div:nth-child(3) {
+    background: #fafa764d;
+    background: #fafa76ff;
+  }
+
+  /* hsla() 함수 방식 */
+  div:nth-child(4) {
+    background: hsla(115, 77%, 76%, 0.3);
+    background: hsla(115, 77%, 76%, 1);
+  }
+
+  /* 텍스트 방식 */
+  div:nth-child(5) {
+    background: lightblue;
+  }
+}
+
+/* z-index 속성 */
+.like {
+  position: relative;
+  block-size: 100px;
+
+  div {
+    position: absolute;
+  }
+
+  .like-item1 {
+    z-index: 1;
+    inset: 20px auto auto 20px;
+  }
+  .like-item3 {
+    z-index: 2;
+    inset: 30px auto auto 30px;
+  }
+}
+
+/* flex + z-index + margin(음수) */
+.lion {
+  display: flex;
+  flex-flow: nowrap row;
+
+  div {
+    block-size: 100px;
+    border-radius: 50%;
+  }
+
+  div:nth-child(n + 2) {
+    margin-inline-start: -30px;
+  }
+
+  div:hover {
+    z-index: 1;
+    cursor: pointer;
+  }
+}
+
+.euid {
+  div:nth-child(n + 2) {
+    margin-block-start: -20px;
+  }
+
+  div.euid-item4 {
+    opacity: 0.5;
+    z-index: 1;
+  }
+  div.euid-item5 {
+    opacity: 0.7;
+  }
+}
+
+/* isolation 속성 */
+.bootcamp {
+  border: 1px solid green;
+  position: relative;
+  block-size: 250px;
+  background: #a9dbe7;
+  isolation: isolate;
+
+  img {
+    position: absolute;
+    inset: 0 auto auto 0;
+    z-index: -1;
+  }
+
+  p {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+  }
+}
