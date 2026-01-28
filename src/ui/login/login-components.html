@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 컴포넌트</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="font" href="/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/utils/ui-component.css" />
+    <link rel="stylesheet" href="/src/ui/login/login.css" />
+    <script type="module" src="/src/ui/utils/ui-component.js"></script>
+  </head>
+  <body class="m-50">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>로그인 컴포넌트</h1>
+    <hr />
+    <h2>SVG 로고</h2>
+    <div class="ui-component">
+      <a href="/" class="go-home" aria-label="네이버">
+        <svg width="165" height="32" viewBox="0 0 165 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.5765 17.1196L9.77815 0H0V31.9872H10.2436V14.8677L22.042 31.9872H31.8202V0H21.5765V17.1196Z" fill="#03CF5D" />
+          <path d="M47.4975 0L35.0785 31.9872H45.6356L47.1334 27.7649H59.0362L60.5371 32H71.0911L58.6721 0.0127976L47.4975 0ZM49.5462 20.0688L53.0864 10.076L56.6234 20.0688H49.5462Z" fill="#03CF5D" />
+          <path d="M83.6653 21.0316L76.2113 0H65.6574L78.0764 31.9872H89.251L101.67 0H91.1129L83.6653 21.0316Z" fill="#03CF5D" />
+          <path d="M115.017 19.8353H129.453V12.1519H115.017V7.84006H129.608V0H104.928V31.9872H129.918V24.1471H115.017V19.8353Z" fill="#03CF5D" />
+          <path
+            d="M156.995 21.0124L157.945 20.6062C161.625 19.0516 163.496 15.6833 163.496 11.4098C163.496 7.36985 162.036 4.37265 159.161 2.52699C156.485 0.802882 153.018 0 148.243 0H134.887V31.9872H144.82V23.05H148.392L154.443 31.9872H165L156.995 21.0124ZM150.098 14.8964H144.665V8.15354H150.098C150.984 8.15354 151.833 8.50875 152.458 9.14102C153.084 9.77329 153.436 10.6308 153.436 11.525C153.436 12.4192 153.084 13.2767 152.458 13.909C151.833 14.5412 150.984 14.8964 150.098 14.8964V14.8964Z"
+            fill="#03CF5D"
+          />
+        </svg>
+      </a>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h2>입력 서식</h2>
+    <div class="ui-component">
+      <div class="form-input">
+        <label for="form-input-0">레이블 </label>
+        <input id="form-input-0" type="text" name="form-input-0" requierd placeholder="입력서식 힌트를 입력해주세요" aria-errormessage="error-msg" />
+        <p id="error-msg" class="error-msg" aria-live="polite">에러메시지를 입력해 주세요</p>
+      </div>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h2>버튼</h2>
+    <div class="ui-component">
+      <button type="submit" class="button button-fill">버튼</button>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h2>버튼</h2>
+    <div class="ui-component">
+      <button type="submit" class="button button-outline">버튼</button>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h2>체크박스</h2>
+    <div class="ui-component">
+      <div class="form-checkbox">
+        <input type="checkbox" name="form-checkbox-0" id="form-checkbox-0" value="state on" />
+        <label class="bg-icon" for="form-checkbox-0"> 로그인 상태 유지 </label>
+      </div>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h2>체크박스</h2>
+    <div class="ui-component">
+      <div class="form-checkbox">
+        <input type="checkbox" name="form-checkbox-1" id="form-checkbox-1" value="state on" />
+        <label for="form-checkbox-1" class="svg-icon"
+          ><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.9764 23.4985C18.3541 23.4985 23.5242 18.3284 23.5242 11.9507C23.5242 5.57305 18.3541 0.402939 11.9764 0.402939C5.59878 0.402939 0.428665 5.57305 0.428665 11.9507C0.428665 18.3284 5.59878 23.4985 11.9764 23.4985Z" fill="white" class="area" />
+            <path
+              d="M12.0021 24.0043C9.62835 24.0043 7.30786 23.3004 5.33411 21.9816C3.36037 20.6628 1.82203 18.7883 0.913614 16.5952C0.00520043 14.4021 -0.232482 11.9888 0.230623 9.66065C0.693728 7.33246 1.83682 5.19388 3.51535 3.51535C5.19388 1.83682 7.33246 0.693728 9.66065 0.230623C11.9888 -0.232482 14.4021 0.00520043 16.5952 0.913614C18.7883 1.82203 20.6628 3.36037 21.9816 5.33411C23.3004 7.30786 24.0043 9.62835 24.0043 12.0021C24.0043 15.1853 22.7398 18.2381 20.4889 20.4889C18.2381 22.7398 15.1853 24.0043 12.0021 24.0043ZM12.0021 1.28595C9.88268 1.28595 7.81082 1.91444 6.04855 3.09195C4.28628 4.26946 2.91275 5.94311 2.10167 7.90124C1.29059 9.85937 1.07837 12.014 1.49186 14.0928C1.90534 16.1715 2.92596 18.081 4.42465 19.5796C5.92334 21.0783 7.83278 22.0989 9.91152 22.5124C11.9903 22.9259 14.1449 22.7137 16.1031 21.9026C18.0612 21.0915 19.7348 19.718 20.9123 17.9557C22.0898 16.1935 22.7183 14.1216 22.7183 12.0021C22.7183 9.16004 21.5893 6.43433 19.5796 4.42465C17.57 2.41497 14.8443 1.28595 12.0021 1.28595Z"
+              fill="#999999"
+              class="border"
+            />
+            <path
+              d="M10.6648 16.9059C10.4932 16.905 10.3287 16.8374 10.2061 16.7173L6.66976 13.1809C6.61009 13.121 6.56281 13.0499 6.53063 12.9717C6.49844 12.8934 6.48198 12.8096 6.48218 12.7251C6.48238 12.6405 6.49924 12.5568 6.53179 12.4787C6.56434 12.4006 6.61195 12.3297 6.6719 12.2701C6.73185 12.2104 6.80296 12.1631 6.88119 12.1309C6.95941 12.0988 7.0432 12.0823 7.12778 12.0825C7.21237 12.0827 7.29608 12.0995 7.37415 12.1321C7.45222 12.1646 7.52311 12.2123 7.58278 12.2722L10.639 15.3285L16.5072 8.81302C16.5619 8.74484 16.63 8.68854 16.7072 8.64754C16.7843 8.60654 16.8691 8.58172 16.9562 8.57458C17.0433 8.56744 17.131 8.57814 17.2138 8.60602C17.2967 8.6339 17.373 8.67838 17.438 8.73674C17.5031 8.7951 17.5556 8.86611 17.5923 8.94544C17.629 9.02477 17.6491 9.11075 17.6515 9.19813C17.6538 9.2855 17.6383 9.37244 17.6059 9.45363C17.5736 9.53481 17.525 9.60854 17.4631 9.67032L11.1448 16.6916C11.0865 16.7572 11.0154 16.8101 10.9357 16.847C10.856 16.8838 10.7697 16.9039 10.6819 16.9059H10.6648Z"
+              fill="#999999"
+              class="mark"
+            />
+          </svg>
+          로그인 상태 유지
+        </label>
+      </div>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h2>링크 텍스트</h2>
+    <div class="ui-component">
+      <a class="new-window-link" href="/" target="_blank" rel="norrefferrer">링크 텍스트</a>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <div class="ui-component">
+      <div class="form-switch">
+        <input id="form-switch-0" name="form-switch-0" type="checkbox" />
+        <label for="form-switch-0"><span class="sr-only">IP 보안</span></label>
+      </div>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+  </body>
+</html>

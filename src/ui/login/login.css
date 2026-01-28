@@ -1,0 +1,166 @@
+/* 컴포넌트 */
+:root {
+  --green-100: #1ba81b;
+}
+/* svg 로고 */
+.go-home {
+  display: block;
+  inline-size: 230px;
+  block-size: 44px;
+}
+
+/* 입력 서식 */
+.form-input {
+  font-size: 14px;
+
+  input {
+    block-size: 48px;
+    inline-size: 100%;
+    padding: 2px 10px;
+    border: 1px solid gainsboro;
+
+    &:read-only,
+    &:disabled {
+      background: lightgray;
+    }
+
+    &:focus {
+      border: 1px solid var(--green-100);
+      background: #e8fde3;
+    }
+  }
+
+  .error-msg {
+    color: tomato;
+    font-size: 12px;
+    margin-block-start: 8px;
+    display: none;
+  }
+
+  input:user-invalid + .error-msg {
+    display: block;
+  }
+}
+
+/* 버튼 */
+.button {
+  border: 0;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: transparent;
+
+  &.button-fill {
+    background: var(--green-100);
+    color: white;
+
+    &:disabled {
+      background: lightgray;
+    }
+  }
+
+  &.button-outline {
+    color: var(--green-100);
+    border: 1px solid var(--green-100);
+
+    &:disabled {
+      color: lightgray;
+    }
+  }
+}
+
+/* 체크박스 */
+.form-checkbox {
+  --size: 24px;
+
+  font-size: 14px;
+  display: inline-flex;
+  flex-flow: nowrap row;
+  position: relative;
+
+  input {
+    position: absolute;
+    inset: 0 auto auto 0;
+    margin: 0;
+    inline-size: var(--size);
+    block-size: var(--size);
+    appearance: none;
+  }
+  label {
+    block-size: var(--size);
+    align-content: center;
+  }
+}
+
+/* 배경 이미지 */
+.form-checkbox {
+  .bg-icon {
+    background: url(/src/assets/naver/unchecked.svg) no-repeat;
+    padding-inline-start: 24px;
+  }
+
+  input:checked + .bg-icon {
+    background-image: url(/src/assets/naver/checked.svg);
+  }
+}
+
+/* svg요소 */
+.form-checkbox {
+  align-items: center;
+  column-gap: 4px;
+
+  .svg-icon {
+    display: contents;
+
+    svg {
+      inline-size: var(--size);
+      block-size: var(--size);
+    }
+  }
+
+  input:checked + .svg-icon {
+    .area {
+      fill: var(--green-100);
+    }
+    .border {
+      fill: var(--green-100);
+    }
+    .mark {
+      fill: white;
+    }
+  }
+}
+
+/* 스위치 */
+.form-switch {
+  --size: 24px;
+  font-size: 14px;
+  block-size: var(--size);
+  position: relative;
+  display: inline-flex;
+  flex-flow: nowrap row;
+
+  input {
+    position: absolute;
+    inset: 0 auto auto 0;
+    margin: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    appearance: none;
+  }
+
+  label {
+    inline-size: 2.5em;
+  }
+
+  label::after {
+    content: 'OFF';
+    color: lightgray;
+    font-weight: 700;
+  }
+
+  input:checked + label::after {
+    content: 'ON';
+    color: var(--green-100);
+    font-weight: 700;
+  }
+}
