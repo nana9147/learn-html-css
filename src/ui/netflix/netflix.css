@@ -1,3 +1,7 @@
+:root {
+  --basic-color: #e50914;
+}
+
 /* 컴포넌트 */
 /* 콤보박스 */
 .combo-box {
@@ -31,4 +35,22 @@ select {
 
 .select-icon {
   inset-inline-end: 10px;
+}
+
+/* 로고 */
+.go-home {
+  color: var(--basic-color);
+  display: block;
+  inline-size: clamp(80px, 21.333%, 140px);
+}
+
+/* 로그인버튼 */
+.login-btn {
+  color: white;
+  background: var(--basic-color);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: 0;
 }
