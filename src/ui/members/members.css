@@ -1,0 +1,66 @@
+.members-wrapper {
+  block-size: 500px;
+  overflow-y: auto;
+  white-space: nowrap;
+
+  /* 스크롤바 커스텀 */
+  /* Webkit 기반 브라우저 (크롬, 엣지, 사파리) */
+  &::-webkit-scrollbar {
+    width: 10px;
+    background: var(--gray, #e0e0e0);
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--black, #222);
+    border-radius: 8px;
+    border: 2px solid var(--gray, #e0e0e0);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--gray, #e0e0e0);
+    border-radius: 8px;
+  }
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--black, #222) var(--gray, #e0e0e0);
+}
+
+.members {
+  inline-size: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid var(--black);
+
+  thead,
+  tfoot {
+    background: var(--black);
+    color: var(--white);
+  }
+  thead {
+    position: sticky;
+    inset-inline-start: 0;
+  }
+
+  th,
+  td {
+    text-align: center;
+    padding: 1em 1em;
+  }
+
+  .number {
+    inline-size: 10%;
+  }
+  .name {
+    inline-size: 20%;
+  }
+  .email {
+    inline-size: 40%;
+  }
+  .phone {
+    inline-size: 30%;
+  }
+
+  tbody tr:nth-child(even) {
+    background: var(--gray);
+  }
+}
