@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니 (Shopping Cart)</title>
+    <link rel="shortcut icon" href="/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/likelion.svg" type="image/svg+xml" />
+    <link rel="preload" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/utils/ui-component.css" />
+    <link rel="stylesheet" href="/src/ui/shopping-cart/shopping-cart.css" />
+    <script type="module" src="/src/ui/utils/ui-component.js"></script>
+  </head>
+  <body class="m-50">
+    <div class="go-index"><a href="/index.html">Index로 이동</a></div>
+    <h1>장바구니 (Shopping Cart)</h1>
+    <hr />
+    <h2>컴포넌트</h2>
+    <h3>장바구니</h3>
+    <div class="ui-component">
+      <span class="shopping-cart-title">장바구니</span>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+
+    <h3>장바구니 푸터</h3>
+    <div class="ui-component">
+      <span class="shopping-cart-result">
+        <em>구매 총액 <span aria-hidden="true"> : </span></em>
+        <output>8,600원</output>
+      </span>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+
+    <h3>장바구니 상품</h3>
+    <div class="ui-component">
+      <figure class="shopping-cart-product">
+        <img src="/src/assets/cart/product-04.jpg" alt="" />
+        <figcaption>
+          <a href="/">상품명</a>
+          <span>10,000원</span>
+        </figcaption>
+      </figure>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <h3>상품수량 선택버튼</h3>
+    <div class="ui-component">
+      <div class="button-product-quantity">
+        <button type="button" class="button-increase" aria-label="상품 개수 증가"></button>
+        <button type="button" class="button-decrease" aria-label="상품 개수 감소"></button>
+        <output aria-live="assertive" aria-relevant="additions" aria-atomic="true">1</output>
+      </div>
+      <button type="button" class="copy-component">복사</button>
+    </div>
+  </body>
+</html>
