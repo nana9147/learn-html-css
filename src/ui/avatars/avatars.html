@@ -19,84 +19,150 @@
     <h1>아바타(Avatars)</h1>
     <hr />
     <h2>컴포넌트</h2>
-    <!-- 인터렉션이 있는 경우 -->
-
+    <h3>인터렉션이 있는 경우</h3>
     <div class="ui-component">
       <button type="button" class="avatar online">
         <img src="/src/assets/face/face1.webp" alt="홍길동" />
         <span class="sr-only">온라인</span>
         <span class="state"></span>
       </button>
-      <br/>
-      <button type="button" class="copy-component">Copy</button>
-    </div>
-    <hr/>
-
-    <div class="ui-component">
-      <button type="button" class="avatar offline">
-        <img src="/src/assets/face/face1.webp" alt="홍길동" />
-        <span class="sr-only">오프라인</span>
-        <span class="state"></span>
-      </button>
-      <br/>
+      <br />
       <button type="button" class="copy-component">Copy</button>
     </div>
     <hr />
-    <h2>레이아웃</h2>
-    <div class="avatars">
-      
+    <div class="ui-component">
       <button type="button" class="avatar offline">
-        <img src="/src/assets/face/face1.webp" alt="박규나">
+        <img src="/src/assets/face/face1.webp" alt="홍길동" />
         <span class="sr-only">오프라인</span>
         <span class="state"></span>
       </button>
-    
-      <button type="button" class="avatar online">
-        <img src="/src/assets/face/face2.webp" alt="추유나">
-        <span class="sr-only">온라인</span>
-        <span class="state"></span>
-      </button>
-    
-      <button type="button" class="avatar offline">
-        <img src="/src/assets/face/face3.webp" alt="최영은">
-        <span class="sr-only">오프라인</span>
-        <span class="state"></span>
-      </button>
-    
-      <button type="button" class="avatar online">
-        <img src="/src/assets/face/face4.webp" alt="박소유">
-        <span class="sr-only">온라인</span>
-        <span class="state"></span>
-      </button>
-      
-      <button type="button" class="avatar online">
-        <img src="/src/assets/face/face5.webp" alt="이규화">
-        <span class="sr-only">온라인</span>
-        <span class="state"></span>
-      </button>
-    
-      <button type="button" class="avatar online">
-        <img src="/src/assets/face/face6.webp" alt="이동근">
-        <span class="sr-only">온라인</span>
-        <span class="state"></span>
-      </button>
-
-            
-      <button type="button" class="avatar offline">
-        <img src="/src/assets/face/face7.webp" alt="홍정빈">
-        <span class="sr-only">오프라인</span>
-        <span class="state"></span>
-      </button>
-
-      <button type="button" class="avatar offline">
-        <img src="/src/assets/face/face8.webp" alt="강재훈">
-        <span class="sr-only">오프라인</span>
-        <span class="state"></span>
-      </button>
-      
+      <br />
+      <button type="button" class="copy-component">Copy</button>
     </div>
+    <hr />
+    <h3>인터렉션이 없는 경우</h3>
+    <div class="ui-component">
+      <figure class="profile">
+        <img src="/src/assets/face/face5.webp" alt="홍길동" />
+        <figcaption>
+          <span class="sr-only">온라인</span>
+          <span class="state"></span>
+        </figcaption>
+      </figure>
+      <br />
+      <button type="button" class="copy-component">복사</button>
+    </div>
+    <hr />
+    <h2>레이아웃</h2>
+    <h3>버튼 컴포넌트</h3>
+    <div class="avatars">
+      <button type="button" class="avatar offline">
+        <img src="/src/assets/face/face1.webp" alt="박규나" />
+        <span class="sr-only">오프라인</span>
+        <span class="state"></span>
+      </button>
 
-    
+      <button type="button" class="avatar online">
+        <img src="/src/assets/face/face2.webp" alt="추유나" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+
+      <button type="button" class="avatar offline">
+        <img src="/src/assets/face/face3.webp" alt="최영은" />
+        <span class="sr-only">오프라인</span>
+        <span class="state"></span>
+      </button>
+
+      <button type="button" class="avatar online">
+        <img src="/src/assets/face/face4.webp" alt="박소유" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+
+      <button type="button" class="avatar online">
+        <img src="/src/assets/face/face5.webp" alt="이규화" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+
+      <button type="button" class="avatar online">
+        <img src="/src/assets/face/face6.webp" alt="이동근" />
+        <span class="sr-only">온라인</span>
+        <span class="state"></span>
+      </button>
+
+      <button type="button" class="avatar offline">
+        <img src="/src/assets/face/face7.webp" alt="홍정빈" />
+        <span class="sr-only">오프라인</span>
+        <span class="state"></span>
+      </button>
+
+      <button type="button" class="avatar offline">
+        <img src="/src/assets/face/face8.webp" alt="강재훈" />
+        <span class="sr-only">오프라인</span>
+        <span class="state"></span>
+      </button>
+    </div>
+    <hr />
+    <h3>이미지 컴포넌트</h3>
+    <div class="profiles">
+      <figure class="profile">
+        <img src="/src/assets/face/face1.webp" alt="홍길동" />
+        <figcaption>
+          <span class="sr-only">온라인</span>
+          <span class="state"></span>
+        </figcaption>
+      </figure>
+      <figure class="profile">
+        <img src="/src/assets/face/face2.webp" alt="홍길동" />
+        <figcaption>
+          <span class="sr-only">온라인</span>
+          <span class="state"></span>
+        </figcaption>
+      </figure>
+      <figure class="profile">
+        <img src="/src/assets/face/face3.webp" alt="홍길동" />
+        <figcaption>
+          <span class="sr-only">온라인</span>
+          <span class="state"></span>
+        </figcaption>
+      </figure>
+      <figure class="profile">
+        <img src="/src/assets/face/face4.webp" alt="홍길동" />
+        <figcaption>
+          <span class="sr-only">온라인</span>
+          <span class="state"></span>
+        </figcaption>
+      </figure>
+      <figure class="profile">
+        <img src="/src/assets/face/face5.webp" alt="홍길동" />
+        <figcaption>
+          <span class="sr-only">온라인</span>
+          <span class="state"></span>
+        </figcaption>
+      </figure>
+      <figure class="profile">
+        <img src="/src/assets/face/face6.webp" alt="홍길동" />
+        <figcaption>
+          <span class="sr-only">온라인</span>
+          <span class="state"></span>
+        </figcaption>
+      </figure>
+      <figure class="profile">
+        <img src="/src/assets/face/face7.webp" alt="홍길동" />
+        <figcaption>
+          <span class="sr-only">온라인</span>
+          <span class="state"></span>
+        </figcaption>
+      </figure>
+      <figure class="profile">
+        <img src="/src/assets/face/face8.webp" alt="홍길동" />
+        <figcaption>
+          <span class="sr-only">온라인</span>
+          <span class="state"></span>
+        </figcaption>
+      </figure>
     </div>
   </body>
-  </html>
+</html>
