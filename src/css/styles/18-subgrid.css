@@ -6,6 +6,9 @@
   display: grid;
   row-gap: 20px;
   box-shadow: 4px 4px 2px 0 #787878;
+  /* aspect-raio로 이미지 높이 비율이 늘어날 때 이미지 가로 크기도 함께 커지면서 align-items: stretch에 의해 ovflow 현상이 발생 */
+  /* 이 현상을 해결하기 위해 align-items 속성의 값을 stretch 대신 start 또는 center 등의 값을 사용하여 해결 */
+  align-items: start;
 
   h2 {
     color: #296897;
@@ -13,6 +16,8 @@
   }
 
   figure {
+    aspect-ratio: 2/1.2;
+
     img {
       inline-size: 100%;
       block-size: 100%;
@@ -39,7 +44,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
-  align-items: start;
 
   .card {
     grid-template-rows: subgrid;
