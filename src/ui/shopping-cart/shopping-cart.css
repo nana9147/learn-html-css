@@ -152,3 +152,19 @@ body {
     padding-inline: 4px;
   }
 }
+
+/* 레이아웃 */
+.shopping-cart {
+  min-inline-size: max-content;
+  /* 상품목록 */
+  .shopping-cart-products {
+    li {
+      margin-block: 20px;
+      display: flex;
+      flex-flow: nowrap row;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 20px;
+    }
+  }
+}
