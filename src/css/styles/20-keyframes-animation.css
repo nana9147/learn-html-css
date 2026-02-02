@@ -1,0 +1,104 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+.keyframes-wrapper {
+  display: grid;
+  gap: 20px;
+  border: 1px solid currentColor;
+  padding: 20px;
+  strong {
+    font-size: 1.5em;
+  }
+  .controls {
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 10px;
+
+    button {
+      border: 0;
+      padding: 10px 20px;
+      background: var(--dark-blue);
+      color: var(--white);
+      border-radius: 8px;
+    }
+  }
+  .target-animation {
+    border: 1px solid currentColor;
+    padding: 10px;
+    background: var(--pink);
+    font-size: 1.5em;
+    font-weight: 700;
+
+    animation-duration: 2s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+}
+
+/* Fade */
+.fade {
+  animation-name: fade;
+}
+
+/* shrink */
+.shrink {
+  animation-name: shrink;
+}
+
+/* Bounce */
+.bounce.target-animation {
+  animation-name: bounce;
+  animation-duration: 0.5s;
+}
+
+/* Spin */
+.spin.target-animation {
+  animation-name: spin;
+  inline-size: 100px;
+  block-size: 100px;
+  border-radius: 50%;
+  text-align: center;
+  align-content: center;
+  background: conic-gradient(from 0.25turn, #ffafaf, #ecec78, #86e486, #7070ec);
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+/* Angle */
+.angle.target-animation {
+  --angle: 0deg;
+
+  inline-size: 100px;
+  block-size: 100px;
+  text-align: center;
+  align-content: center;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 10px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: conic-gradient(from var(--angle), #5f68f1 0 25%, transparent 25% 100%);
+    inline-size: 110%;
+    block-size: 110%;
+    inset: 50% auto auto 50%;
+    translate: -50% -50%;
+    isolation: isolate;
+    z-index: -1;
+    border-radius: 10px;
+    /* 단축속성 */
+    animation: angle 5s infinite linear;
+    animation-play-state: paused;
+    /* animation-name: angle;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: normal; */
+  }
+}
