@@ -1,0 +1,78 @@
+.transition-wrapper {
+  p {
+    padding: 20px;
+  }
+
+  .toggle {
+    border: 0;
+    padding: 10px;
+    background: var(--dark-blue);
+    color: var(--white);
+    border-radius: 4px;
+    margin-block-end: 10px;
+  }
+}
+
+.like {
+  background: var(--yellow);
+  transition:
+    background-color 0.5s ease-in-out,
+    border-radius 1s;
+  padding: 30px;
+  border-radius: 8px;
+
+  &.is-active {
+    border-radius: 50px;
+    background: var(--pink);
+  }
+}
+
+/* 배경색상과 둥근 모서리 변경 */
+.lion {
+  background: var(--mint);
+  transition-property: background, border-radius;
+  transition-duration: 400ms, 1000ms;
+  transition-delay: 0ms 200ms;
+  transition-timing-function: ease-in-out;
+  transition:
+    background 500ms 0ms ease-in-out,
+    border-radius 1000ms 200ms ease-in-out;
+
+  &.is-active {
+    background: var(--black);
+    border-radius: 50px;
+    color: var(--white);
+  }
+}
+/* 너비 변경 */
+.euid {
+  background: var(--orange);
+  inline-size: 200px;
+  transition-property: inline-size;
+  transition-duration: 1000ms;
+
+  &.is-active {
+    inline-size: 400px;
+  }
+}
+/* Transform 관련 속성 */
+.bootcamp {
+  background: var(--lavender);
+  padding: 20px;
+
+  p {
+    border: 1px solid currentColor;
+    inline-size: 400px;
+    transform: translate(0, 0);
+    transition-property: all;
+    transition-duration: 1000ms;
+  }
+
+  &.is-active {
+    p {
+      /* transform: translate(50px, 10px); */
+      translate: 50px 10px;
+      scale: 1.2;
+    }
+  }
+}
