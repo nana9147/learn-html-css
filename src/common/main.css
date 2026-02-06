@@ -22,6 +22,32 @@ a {
     margin-block: 10px;
   }
 
+  .main-title {
+    inline-size: 100%;
+    border-bottom: 1px solid goldenrod;
+    margin-block-end: 50px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .group-wrapper {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+    gap: 20px;
+
+    .group {
+      border: 1px solid goldenrod;
+      border-radius: 10px;
+      padding: 20px;
+
+      flex: 1;
+      min-width: 250px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
   .markup {
     order: 3;
   }
