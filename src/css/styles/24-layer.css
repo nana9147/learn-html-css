@@ -1,0 +1,81 @@
+/* layer 적용 우선순위 
+    1. layer 정의가 없는 CSS
+    2. @layer로 선언되었지만 이름이 명시되지 않은 layer (암묵적 순서)
+    3. @layer로 순서를 명시한 layer (선언 순서 기준)
+    4. !important를 선언할 경우 @layer로 정의한 css는 기존 명시도 역순으로 명시도가 적용된다.
+
+*/
+
+@layer frontend,bootcamp, euid;
+
+/* 명시도 3 */
+@layer euid {
+  .like {
+    border: 5px solid red;
+    padding: 20px;
+    background: var(--yellow);
+
+    /* !important가 선언된 color 속성의 경우 명시도 3 */
+    p {
+      color: crimson !important;
+    }
+  }
+}
+
+/* 명시도 1 */
+@layer frontend {
+  .like {
+    border: 5px solid blue;
+    padding: 20px;
+    background: var(--mint);
+
+    /* !important가 선언된 color 속성의 경우 명시도 5 */
+    p {
+      color: turquoise !important;
+    }
+  }
+}
+
+/* 명시도 2 */
+@layer bootcamp {
+  .like {
+    border: 5px solid green;
+    padding: 20px;
+    background: var(--pink);
+
+    /* !important가 선언된 color 속성의 경우 명시도 4 */
+    p {
+      color: goldenrod !important;
+    }
+  }
+}
+
+/* 이름이 없는 레이어는 이름이 있는 레이어보다 명시도가 높음 */
+/* 명시도 4 */
+@layer {
+  .like {
+    border: 5px solid purple;
+    padding: 20px;
+    background: var(--blue);
+
+    /* !important가 선언된 color 속성의 경우 명시도 2 */
+    p {
+      color: darkorange !important;
+    }
+  }
+}
+
+/* 레이어 규칙을 사용하지 않은 경우는 레이어 규칙을 사용한 것보다 명시도가 높음 */
+/* 명시도5 */
+.like {
+  border: 5px solid black;
+  padding: 20px;
+  background: var(--lavender);
+
+  /* !important가 선언된 color 속성의 경우 명시도 1 */
+  p {
+    color: darkolivegreen !important;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+}
